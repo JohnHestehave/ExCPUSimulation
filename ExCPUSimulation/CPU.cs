@@ -37,9 +37,14 @@ namespace ExCPUSimulation
 						Accumulator += value;
 						Console.WriteLine("Add value " + value +" from address " + address + " and store in accumulator");
 						break;
+					case 3:
+						if (Accumulator - value < 0) throw new Exception("The value subtracted from accumulator is greater than the value in the accumulator");
+						Accumulator -= value;
+						Console.WriteLine("Subtract value " + value + " from address " + address + " and store in accumulator");
+						break;
 					case 6:
 						Ram.Addresses[address] = Accumulator.ToString().PadLeft(6, '0');
-						Console.WriteLine("Store value " + value + " to address " + address);
+						Console.WriteLine("Store value " + Accumulator + " to address " + address);
 						break;
 					case 99:
 						running = false;

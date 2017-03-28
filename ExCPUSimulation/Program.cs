@@ -21,7 +21,9 @@ namespace ExCPUSimulation
 			CPU cpu = new CPU(ram);
 
 			cpu.Execute();
+			Console.WriteLine();
 			ram.PrintAll();
+			Console.ReadKey();
 		}
 		
 

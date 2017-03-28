@@ -20,6 +20,7 @@ namespace ExCPUSimulation
 
 		public void PrintAll()
 		{
+			Console.WriteLine("Printing all addresses...");
 			for (int i = 0; i < Addresses.Length; i++)
 			{
 				Console.WriteLine("Address "+ i+": "+Addresses[i]);
